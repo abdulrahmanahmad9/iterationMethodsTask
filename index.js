@@ -78,3 +78,80 @@ const res8 = res7.map ( (num8)=> {
 })
 console.log (res7)
 console.log (res8);
+
+
+/*****************************************************************
+Part 4: Extra not required 🌶️🌶️🌶️
+******************************************************************/
+/*************************************
+ * logger(array)
+ *
+ * - Accepts an array
+ * - Logs every element of the array
+ ************************************/
+
+const logger = [1, 2, 3, 4, 5];
+logger.forEach(function(number) {
+    console.log(number);
+});
+
+/*************************************
+ * toCelsius(temperatures)
+ *
+ * - Accepts an array of temperatures
+ *   in degrees Fahrenheit
+ * - Returns an array of temperatures
+ *   in degrees Celsius
+ *
+ * The conversion is:
+ *   C = (F - 32) * (5/9)
+ ************************************/
+const temp = [100,60,130,110]
+ const toCelsius = temp.map ((temperatures) => { return ((temperatures - 32 ) * (5/9))});
+console.log(toCelsius)
+
+
+/**************************************
+ * hottestDays(temperatures, threshhold)
+ *
+ * - Accepts an array of temperatures
+ * - Accepts a threshhold temperature
+ * - Returns an array of temperatures
+ *   that exceed the threshhold
+ ***************************************/
+const temperatureC = [35,65,60,40,45,64,30,51,50]
+
+const threshhold = [49]
+
+const hottestDays = temperatureC.filter ((tempo) => {
+return tempo > threshhold ;
+})
+console.log ( hottestDays)
+
+/******************************************
+ * logHottestDays(temperatures, threshhold)
+ 
+ * - Accepts an array of temperatures
+ *   IN DEGREES FAHRENHEINT
+ * - Accepts a threshhold temperature
+ *   IN DEGREES FAHRENHEINT
+ * - Logs temperatures that exceed the
+ *   threshhold to the console
+ *   IN DEGREES CELSIUS
+ 
+ * hint: you can combine
+ *       all previous functions
+ *******************************************/
+
+const temperaturef = [80,119,100,150,90]
+
+const threshholdf = [85]
+
+const logHottestDays = temperaturef.filter ((tempof) => {
+return tempof > threshholdf ;
+})
+
+const logHottestDaysC = logHottestDays.map ( (tempoc ) => {
+    return ((tempoc - 32 ) * (5/9));
+})
+console.log ( logHottestDaysC)
